@@ -1,0 +1,17 @@
+<header>
+  <h1>Todo List</h1>
+   <login-buttons></login-buttons>
+</header>
+
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Average rate</td>
+    <td>Rate the user</td>
+  </tr>
+  <tr ng-repeat="task in $ctrl.tasks">
+    <td>{{task.username}}</td>
+    <td>{{task.profile.avgRate}}</td>
+    <td><input type="text" ng-click="$ctrl.setRate(task,$index)" ng-model="$ctrl.avgRate[$index]"/></td>
+  </tr>
+</table>
